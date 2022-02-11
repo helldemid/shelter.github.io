@@ -1,0 +1,212 @@
+body {
+    background: whitesmoke;
+}
+
+body, html {
+    /* color: #423c3c; */
+    /* color: var(--dark-gray-color-firm); */
+    font-family: "Rubik",sans-serif;
+    line-height: 1.4;
+}
+
+.shelter-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: center 0;
+    z-index: 0;
+}
+
+.navigator {
+    position: relative;;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.button {
+    display: inline-block;
+    margin: 15px;
+    width: 82px;
+    height: 82px;
+    background: url(https://i.pinimg.com/originals/17/b1/18/17b118cc01bb94c3a432d97fbd88729a.jpg);
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid white;
+  
+    box-shadow: 0 3px 20px rgba(0,0,0,.25),
+    inset 0 2px 0 rgba(255,255,255,.6),
+    0 2px 0 rgba(0,0,0,.1),
+    inset 0 0 20px rgba(0,0,0,.1);
+}
+
+.button:hover {
+    box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+    0 2px 0 rgba(255,255,255,.4),
+    inset 0 2px 0 rgba(0,0,0,.1);
+}
+
+.btn-photo {
+    background: url("media/logo-nav.png") center center no-repeat;
+}
+
+.contentArea {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border-radius: 24px 24px 0 0;
+    background: white;
+    color: gray;
+    padding: 1em;
+    top: 55px;
+    margin-left: 30%;
+    box-shadow: var(--light-shadow);
+}
+
+.contentArea h1 {
+    text-align: center;
+    color: black;
+}
+
+.productsList {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.productArea {
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.productImage {
+    flex-shrink: 0;
+    display: flex;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    max-height: 370px;
+    border-radius: 26px;
+}
+
+.productHeader, .extrainf {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.producTitle {
+    margin: 0 0 6px;
+    font-size: 35px;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+    line-height: 1;
+    color: black;
+    font-stretch: expanded;
+}
+
+.productWeight {
+    color: #989898;
+    font-size: 18px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-left: 16px;
+    text-align: end;
+    font-style: oblique;
+}
+
+.productDescription {
+    position: relative;
+    margin-bottom: 6px;
+    color: #676767;
+    font-size: 20px;
+    align-self: start;
+    width: 100%;
+}
+
+.productEnergy {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 500;
+    display: -webkit-box;
+    color: #676767;
+    overflow: hidden;
+    flex-grow: 1;
+    font-style: oblique;
+}
+
+.productFooter {
+    font-weight: 100;
+    font-size: x-large;
+    align-items: baseline;
+    line-height: 1;
+    color: black;
+    font-stretch: expanded;
+    font-family: fangsong;
+    flex-shrink: 0;
+}
+
+#snid {
+    display: none;
+}
+#lanch {
+    display: none;
+}
+#coffee {
+    display: normal;
+}
+#tea {
+    display: normal;
+}
+
+#variant2, #variant1 {
+    display: none;
+}
+
+
+
+.table_col {
+    font-size: 14px;
+    width: 100%;
+    background: white;
+    text-align: left;
+    border-collapse: collapse;
+    color: #3E4347;
+    text-align: left;
+  }
+.table_col th:first-child, .table_col td:first-child {
+    color: #000000;
+    border-left: none;
+}
+.table_col th {
+  font-weight: normal;
+  border-bottom: .5px solid #5e5c5a;
+  border-right: 0px solid white;
+  border-left: 0px solid white;
+  padding: 8px 10px;
+  width: 20%;
+}
+.table_col td {
+    border-bottom: .5px solid #727272;
+    border-right: 0px solid white;
+    border-left: 0px solid white;
+  padding: 12px 10px;
+  color: #000000;
+  width: 20%;
+}
