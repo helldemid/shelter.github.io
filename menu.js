@@ -4,60 +4,15 @@ document.getElementById('butn2').onclick = Task2;
 //document.getElementById('bavarages2').onclick = Task4;
 document.getElementById('food1').onclick = Task5;
 document.getElementById('food2').onclick = Task6;
+document.getElementById('back').onclick = Task7;
+document.getElementById('hide').onclick = reload;
 
 
-/*function addFood() {
-    var parent = document.getElementById("catalog");
-    let child = document.createElement('div');
-    let child1 = document.createElement('div');
+var contentHeight = document.getElementById('mainContainer').style.height;
 
-    child.className = "category_item item1";
-    child1.className = "category_item item2";
-
-    child.id = "food1";
-    child1.id = "food2";
-
-    child.innerHTML = "<h1>Сніданки</h1>";
-    child1.innerHTML = "<h1>Ланчі</h1>";
-
-    parent.append(child);
-    parent.append(child1);
-
+function reload() {
+    location.reload();
 }
-
-function removeFood() {
-    var parent = document.getElementById("catalog");
-    var child = document.getElementById("food1");
-    var child2 = document.getElementById("food2");
-    parent.removeChild(child);  
-    parent.removeChild(child2);
-}
-function addBavarages() {
-    var parent = document.getElementById("catalog");
-    let child = document.createElement('div');
-    let child1 = document.createElement('div');
-
-    child.className = "category_item item3";
-    child1.className = "category_item item4";
-
-    child.id = "bavarages1";
-    child1.id = "bavarages2";
-
-    child.innerHTML = "<h1>Кава</h1>";
-    child1.innerHTML = "<h1>Чай</h1>";
-
-    parent.append(child);
-    parent.append(child1);
-}
-
-function removeBavarages() {
-    var parent = document.getElementById("catalog");
-    var child = document.getElementById("bavarages1");
-    var child2 = document.getElementById("bavarages2");
-    parent.removeChild(child);  
-    parent.removeChild(child2);
-}
-*/
 
 function addFood() {
     document.getElementById("food1").style.display = "flex";
@@ -112,6 +67,8 @@ function Task5() {
     removeFood();
     document.getElementById("butn1").style.display = "none";
     document.getElementById("butn2").style.display = "none";
+    document.getElementById('back').style.display = "inline-block";
+    document.getElementById('mainContainer').style.height = "auto";
 }
 
 function Task6() {
@@ -120,4 +77,22 @@ function Task6() {
     removeFood();
     document.getElementById("butn1").style.display = "none";
     document.getElementById("butn2").style.display = "none";
+    document.getElementById('back').style.display = "inline-block";
+    document.getElementById('mainContainer').style.height = "auto";
+}
+
+function Task7() {
+    document.getElementById("butn1").style.display = "flex";
+    document.getElementById("butn2").style.display = "flex";
+
+    if(document.getElementById("snid").style.display != "none") {
+        document.getElementById("snid").style.display = "none";
+        addFood();
+    } 
+    if(document.getElementById("lanch").style.display != "none") {
+        document.getElementById("lanch").style.display = "none";
+        addFood();
+    }
+    document.getElementById('mainContainer').style.height = contentHeight;
+    document.getElementById('back').style.display = "none";
 }
