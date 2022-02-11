@@ -68,14 +68,13 @@ body, html {
 }
 
 .btn-back-photo {
-    background-color: white;
-    background: url("media/back.png") center center no-repeat;
+    background: url("media/free-icon-back-130882.png") center center no-repeat;
 }
 
 .btn-back {
     position: fixed;
     top: 0px;
-    left: 30%;
+    left: 30.5%;
     width: 40px;
     height: 40px;
     display: inline-block;
@@ -83,25 +82,22 @@ body, html {
     cursor: pointer;
     border-radius: 50%;
     border: solid white;
-    box-shadow: 0 3px 20px rgba(0,0,0,.25),
-    inset 0 2px 0 rgba(255,255,255,.6),
-    0 2px 0 rgba(0,0,0,.1),
-    inset 0 0 20px rgba(0,0,0,.1);
+    background-color: white;
 }
 
 .shelter-content {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      width: 40%;
-      height: 600px;
-      border-radius: 24px 24px 0 0;
-      background: white;
-      color: gray;
-      padding: 1em;
-      top: 55px;
-      margin-left: 30%;
-      box-shadow: var(--light-shadow);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 600px;
+    border-radius: 24px 24px 0 0;
+    background: white;
+    color: gray;
+    padding: 1em;
+    top: 55px;
+    margin-left: 30%;
+    box-shadow: var(--light-shadow);
 }
 
 .shelter-content h1 {
@@ -262,8 +258,39 @@ body, html {
     letter-spacing: 0.1em;
 }
 
+#back {
+    display: none;
+}
+
 #food1, #food2 {
     display: none;
+}
+
+
+@media only screen  and (max-width: 1024px) {
+    .shelter-content {
+        width: 50%;
+        margin-left: 25%;
+    }
+    .button {
+        width: 62px;
+        height: 62px;
+    }
+}
+
+@media only screen  and (max-width: 425px) {
+    .shelter-content {
+        width: 90%;
+        margin-left: 0px;
+        top: 0px;
+    }
+    .button {
+        width: 40px;
+        height: 40px;
+    }
+    .btn-back {
+        left: 3.5%;
+    }
 }
 
 
