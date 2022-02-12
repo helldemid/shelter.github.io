@@ -31,6 +31,7 @@ body, html {
     left: 0;
     top: 0;
     width: 100%;
+    height: 202px;
     background-size: cover;
     background-position: center 0;
     z-index: 0;
@@ -45,7 +46,7 @@ body, html {
 
 .button {
     display: inline-block;
-    margin: 15px;
+    margin-bottom: 25px;
     width: 82px;
     height: 82px;
     cursor: pointer;
@@ -64,11 +65,11 @@ body, html {
 }
 
 .btn-photo {
-    background: url("media/logo-nav.png") center center no-repeat;
+    background: url("media/logo/logo-nav.png") center center no-repeat;
 }
 
 .btn-back-photo {
-    background: url("media/free-icon-back-130882.png") center center no-repeat;
+    background: url("media/icons/free-icon-back-130882.png") center center no-repeat;
 }
 
 .btn-back {
@@ -81,8 +82,9 @@ body, html {
     margin: 15px;
     cursor: pointer;
     border-radius: 50%;
-    border: solid white;
+    border: solid rgb(255, 255, 255);
     background-color: white;
+    z-index: 10;
 }
 
 .shelter-content {
@@ -97,7 +99,7 @@ body, html {
     padding: 1em;
     top: 55px;
     margin-left: 30%;
-    box-shadow: var(--light-shadow);
+    margin-right: 30%;
 }
 
 .shelter-content h1 {
@@ -239,19 +241,19 @@ body, html {
 
 .item1 {
     order: 1;
-    background: url("media/bf.jpg") center center no-repeat;
+    background: url("media/catalog/bf.jpg") center center no-repeat;
 }
 .item2 {
     order: 2;
-    background: url("media/lanch.jpg") center center no-repeat;
+    background: url("media/catalog/lanch.jpg") center center no-repeat;
 }
 .item3 {
     order: 3;
-    background: url("media/coffee.jpg") center center no-repeat;
+    background: url("media/catalog/coffee.jpg") center center no-repeat;
 }
 .item4 {
     order: 4;
-    background: url("media/tee.JPG") center center no-repeat;
+    background: url("media/catalog/tee.JPG") center center no-repeat;
 }
 .category_item h1 {
     color: white;
@@ -265,23 +267,85 @@ body, html {
 #food1, #food2 {
     display: none;
 }
+hr {
+    border: 0;
+    height: 0;
+    box-shadow: 0 0 5px 1px #00000038;
+}
+hr:after {
+    content: "\00a0";
+}
+
+#notAvailable {
+    flex-shrink: 0;
+    display: flex;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 315px;
+    border-radius: 26px;
+    box-shadow: 1px -1px 7px 2px black;
+    background: url("media/lh/burgerNotavaivble.jpg") center center no-repeat;
+    justify-content: center;
+    align-items: center;
+
+}
+#notAvailable h1 {
+    color: white;
+    letter-spacing: 0.1em;
+    font-size: 1.5em;
+}
+
 
 
 @media only screen  and (max-width: 1024px) {
     .shelter-content {
         width: 50%;
         margin-left: 25%;
+        margin-right: 25%;
+        top: 30px;
     }
     .button {
         width: 62px;
         height: 62px;
+    }
+    .shelter-header {
+        height: 140px;
+    }
+    .btn-photo {
+        background: url("media/logo/logo-nav85x85.png") center center no-repeat;
+    }
+    .navigator {
+        top: 0;
+    }
+}
+@media only screen  and (max-width: 768px) {
+    .shelter-content {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+        top: 25px;
+    }
+    .shelter-header {
+        height: 120px;
+    }
+    .button {
+        width: 42px;
+        height: 42px;
+    }
+    .btn-photo {
+        background: url("media/logo/logo-nav65x65.png") center center no-repeat;
     }
 }
 
 @media only screen  and (max-width: 425px) {
     .shelter-content {
         width: 90%;
-        margin-left: 0px;
+        margin: 0px;
         top: 0px;
     }
     .button {
@@ -290,6 +354,22 @@ body, html {
     }
     .btn-back {
         left: 3.5%;
+    }
+    .shelter-header {
+        height: 85px;
+    }
+    .navigator {
+        top: -5px;
+    }
+    .shelter-info {
+        justify-content: flex-start;
+        font-size: 12px;
+    }
+    .menu_nav {
+        justify-content: space-between;
+    }
+    .bttn {
+        width: 45%;
     }
 }
 
