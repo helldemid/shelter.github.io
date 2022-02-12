@@ -1,11 +1,18 @@
 document.getElementById('butn1').onclick = Task1;
 document.getElementById('butn2').onclick = Task2;
-//document.getElementById('bavarages1').onclick = Task3;
-//document.getElementById('bavarages2').onclick = Task4;
+document.getElementById('bavarages1').onclick = Task3;
+document.getElementById('bavarages2').onclick = Task4;
 document.getElementById('food1').onclick = Task5;
 document.getElementById('food2').onclick = Task6;
 document.getElementById('back').onclick = Task7;
 document.getElementById('hide').onclick = reload;
+
+var now = new Date();
+if(now.getDate() == 4) {
+    document.getElementById("notAvailable").style.display = "none";
+} else {
+    document.getElementById("Available").style.display = "none";
+}
 
 
 var contentHeight = document.getElementById('mainContainer').style.height;
@@ -61,9 +68,29 @@ function Task2() {
     removeBavarages();
 }
 
+function Task3() {
+    let temp2 = document.getElementById("coffee");
+    temp2.style.display = "flex";
+    removeBavarages();
+    document.getElementById("butn1").style.display = "none";
+    document.getElementById("butn2").style.display = "none";
+    document.getElementById('back').style.display = "inline-block";
+    document.getElementById('mainContainer').style.height = "auto";
+}
+
+function Task4() {
+    let temp2 = document.getElementById("tea");
+    temp2.style.display = "flex";
+    removeBavarages();
+    document.getElementById("butn1").style.display = "none";
+    document.getElementById("butn2").style.display = "none";
+    document.getElementById('back').style.display = "inline-block";
+    document.getElementById('mainContainer').style.height = "auto";
+}
+
 function Task5() {
-    var temp2 = document.getElementById("snid");
-    temp2.style.display = "block";
+    let temp2 = document.getElementById("snid");
+    temp2.style.display = "flex";
     removeFood();
     document.getElementById("butn1").style.display = "none";
     document.getElementById("butn2").style.display = "none";
@@ -72,8 +99,8 @@ function Task5() {
 }
 
 function Task6() {
-    var temp2 = document.getElementById("lanch");
-    temp2.style.display = "block";
+    let temp2 = document.getElementById("lanch");
+    temp2.style.display = "flex";
     removeFood();
     document.getElementById("butn1").style.display = "none";
     document.getElementById("butn2").style.display = "none";
@@ -84,15 +111,23 @@ function Task6() {
 function Task7() {
     document.getElementById("butn1").style.display = "flex";
     document.getElementById("butn2").style.display = "flex";
+    document.getElementById('mainContainer').style.height = contentHeight;
+    document.getElementById('back').style.display = "none";
 
-    if(document.getElementById("snid").style.display != "none") {
+
+    if(document.getElementById("snid").style.display == "flex") {
         document.getElementById("snid").style.display = "none";
         addFood();
     } 
-    if(document.getElementById("lanch").style.display != "none") {
+    else if(document.getElementById("lanch").style.display == "flex") {
         document.getElementById("lanch").style.display = "none";
         addFood();
     }
-    document.getElementById('mainContainer').style.height = contentHeight;
-    document.getElementById('back').style.display = "none";
+    else if(document.getElementById("coffee").style.display == "flex") {
+        document.getElementById("coffee").style.display = "none";
+        addBavarages();
+    } else {
+        document.getElementById("tea").style.display = "none";
+        addBavarages();
+    }
 }
