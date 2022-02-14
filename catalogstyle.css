@@ -46,8 +46,9 @@
     user-select: none;
     position: relative;
     margin-bottom: 10px;
+    min-width: 0;
     width: 100%;
-    max-height: 300px;
+    max-height: 350px;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 0px black;
 }
@@ -177,7 +178,7 @@
         font-size: 1.4em;
     }
     .productImage {
-        height: 400px;
+        max-height: 400px;
     }
     .productDescription {
         font-size: 18px;
