@@ -7,8 +7,9 @@ document.getElementById('food2').onclick = Task6;
 document.getElementById('back').onclick = Task7;
 document.getElementById('hide').onclick = reload;
 
+
 var now = new Date();
-if(now.getDate() == 4) {
+if(now.getDay() == 4) {
     document.getElementById("notAvailable").style.display = "none";
 } else {
     document.getElementById("Available").style.display = "none";
@@ -65,6 +66,8 @@ function Task2() {
     document.getElementById('butn2').style = "color: white; background: black";
     removeBavarages();
 }
+
+
 
 function Task3() {
     let temp2 = document.getElementById("coffee");
