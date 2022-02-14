@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel = "stylesheet" href = "style.css" type = "text/css">
     <link rel = "stylesheet" href = "catalogstyle.css" type = "text/css">
-    <link rel = "stylesheet" href = "slider.css" type = "text/css">
     <link rel = "stylesheet" href = "slid.css" type = "text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,13 +14,13 @@
 </head>
 <body>
     <div id = "head" class = "shelter-header shelter-header-ph">
-        <!--<img src="media/header/mobileHead.jpg" width="100%" height="100%">-->
     </div>
     <button id = "back" type="submit" class="btn-back btn-back-photo"></button>
 
     <div class="navigator">
         <button id = "hide" type="submit" class="button btn-photo"></button>
     </div>
+    
     <div id = "mainContainer" class="shelter-content">
         <h1 style="font-family: 'Rubik Mono One', sans-serif;"><span>Сховище DEMO</span></h1>
         <div class="shelter-info">
@@ -509,7 +508,7 @@
         </div>
         <div id = "coffee" class="productsList">
             <h1 style="text-align: center;" >Фірмова Кава</h1>
-            <div class="productArea">
+            <div id = "fSlider" class="productArea">
                 <div class="productHeader">
                     <h3 class = "producTitle"><span style="color: #3c3838;">Чорна</span></h3>
                     <div class="productFooter">
@@ -519,37 +518,8 @@
                         <strong>27 ₴</strong>
                     </div>
                 </div>
-                <!--
-                <div class="sim-slider" id = "first">
-                    <ul class="sim-slider-list">
-                      <li><img src="media/no-image.gif" alt="screen"></li> 
-                      <li class="sim-slider-element"><img src="media/cofee/espresso.jpeg" alt="0"></li>
-                      <li class="sim-slider-element"><img src="media/cofee/coffee-americano.jpg" alt="1"></li>
-                      <li class="sim-slider-element"><img src="media/cofee/espVsAmer.jpg" alt="2"></li>
-    
-                    </ul>
-                    <div class="sim-slider-arrow-left"></div>
-                    <div class="sim-slider-arrow-right"></div>
-                    <div class="sim-slider-dots"></div>
-                </div>-->
-                <div class="slider">
-                    <div class="slider__item">
-                      <img src="media/cofee/espresso.jpeg" width="100%" height="100%" alt="0">
-                    </div>
-                    <div class="slider__item">
-                      <img src="media/cofee/coffee-americano.jpg" alt="1">
-                    </div>
-                    <div class="slider__item">
-                      <img src="media/cofee/espVsAmer.jpg" alt="2">
-                    </div>
-                  </div>
-
-                <div class="productDescription">
-                    <p style = "text-align: left;">Еспресо, Американо</p>
-                    <hr>
-                </div>
             </div>
-            <div class="productArea">
+            <div id = "sSlider" class="productArea">
                 <div class="productHeader">
                     <h3 class = "producTitle"><span style="color: #3c3838;">Біла</span></h3>
                     <div class="productFooter">
@@ -558,23 +528,6 @@
                         <img src="media/icons/bigCoffee.png" width="25px" height="25px">
                         <strong>42 ₴</strong>
                     </div>
-                </div>
-                <div class="sim-slider" id = "second">
-                    <ul class="sim-slider-list">
-                      <li><img src="media/no-image.gif" alt="screen"></li>
-                      <li class="sim-slider-element"><img src="media/cofee/capuch.jpg" alt="0"></li>
-                      <li class="sim-slider-element"><img src="media/cofee/latte.jpg" alt="1"></li>
-                      <li class="sim-slider-element"><img src="media/cofee/flet.jpeg" alt="2"></li>
-                      <li class="sim-slider-element"><img src="media/cofee/capVslatte.jpg" alt="3"></li>
-    
-                    </ul>
-                    <div class="sim-slider-arrow-left"></div>
-                    <div class="sim-slider-arrow-right"></div>
-                    <div class="sim-slider-dots"></div>
-                </div>
-                <div class="productDescription">
-                    <p style = "text-align: left;">Капучіно, Лате, Флет уайт</p>
-                    <hr>
                 </div>
             </div>
             <div class="productArea">
@@ -633,11 +586,43 @@
     </div>
     
     <script src = "menu.js"></script>
-    <script src = "slider.js"></script>
-    <script>new Sim("first"); new Sim("second");</script>
     <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src = "slick.min.js"></script>
     <script src = "slid.js"></script>
+    <script>
+    $('#bavarages1').click(function () {
+        var newElems = $("<div id = 'addOne' class='slider'>" +
+        "<div class='slider__item'> <img class='productImage' src='media/cofee/espresso.jpeg'> </div>" +
+        "<div class='slider__item'><img class='productImage' src='media/cofee/coffee-americano.jpg'></div>" + 
+        "<div class='slider__item'><img class='productImage' src='media/cofee/espVsAmer.jpg'></div></div>"
+        +"<div id = 'addOneo' class='productDescription'><p style = 'text-align: left;''>Еспресо, Американо</p><hr></div>");
+        $('#fSlider').append(newElems);
+
+
+        newElems = $("<div id = 'addTwo' class='slider'>" +
+        "<div class='slider__item'> <img class='productImage' src='media/cofee/capuch.jpg'> </div>" +
+        "<div class='slider__item'><img class='productImage' src='media/cofee/latte.jpg'></div>" + 
+        "<div class='slider__item'><img class='productImage' src='media/cofee/flet.jpeg'></div>" + 
+        "<div class='slider__item'><img class='productImage' src='media/cofee/capVslatte.jpg'></div></div>"
+        +"<div id = 'addTwot' class='productDescription'><p style = 'text-align: left;''>Капучіно, Лате, Флет уайт</p><hr></div>");
+        $('#sSlider').append(newElems);
+
+        $(document).ready(function(){
+        $('.slider').slick({
+            arrows:false,
+            dots:true
+        });
+      });
+      });
+      </script>
+      <script>
+        $('#back').click(function() {
+            $('#addOne').remove();
+            $('#addOneo').remove();
+            $('#addTwo').remove();
+            $('#addTwot').remove();
+      });
+      </script>
 </body>
 </html>
 
