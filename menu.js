@@ -13,8 +13,6 @@ if(now.getDate() == 4) {
 } else {
     document.getElementById("Available").style.display = "none";
 }
-
-
 var contentHeight = document.getElementById('mainContainer').style.height;
 
 function reload() {
